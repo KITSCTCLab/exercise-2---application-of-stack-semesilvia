@@ -28,7 +28,7 @@ class Evaluate:
       True if it is empty, else returns False.
     """
       # Write your code here
-      if self.top == 1:
+      if self.top == -1:
         return True
       else:
         return False
@@ -41,7 +41,7 @@ class Evaluate:
       The data which is popped out if the stack is not empty.
     """
     # Write your code here
-    if not self.isEmpty():
+    if not self.is Empty():
       self.stack.pop()
 
 
