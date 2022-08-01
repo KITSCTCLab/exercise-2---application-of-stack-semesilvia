@@ -41,7 +41,7 @@ class Evaluate:
       The data which is popped out if the stack is not empty.
     """
     # Write your code here
-    if not self.is Empty():
+    if not self.isEmpty():
       self.stack.pop()
 
 
@@ -52,7 +52,7 @@ class Evaluate:
       operand: The operand to be pushed.
     """
     # Write your code here
-    if self.top!=self.size_of_stack - 1:
+    if self.top != self.size_of_stack - 1:
       self.stack.append(operand)
 
 
@@ -69,10 +69,10 @@ class Evaluate:
     ops = 0
     for element in expression:
       if element.isnumeric():
-        nums = nums+1
+        nums = nums + 1
        else:
-        ops= ops+1
-      if ops == num - 1:
+        ops= ops + 1
+      if ops == nums - 1:
         return True
       else:
         return false
@@ -99,13 +99,13 @@ class Evaluate:
           stack[-2] = stack[-2] - stack[-1]
           stack.pop()
       elif i == '*':
-          stack[-2] = stack[-2]*stack[-1]
+          stack[-2] = stack[-2] * stack[-1]
           stack.pop()
       elif i == '/':
-          stack[-2] = stack[-2]/stack[-1]
+          stack[-2] = stack[-2] / stack[-1]
           stack.pop()
       elif i == '^':
-          stack[-2] = stack[-2]^stack[-1]
+          stack[-2] = stack[-2] ^ stack[-1]
           stack.pop()
     return in (stack[-1])
 
